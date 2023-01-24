@@ -1,7 +1,6 @@
 import * as PIXI from 'pixi.js';
 import { gsap } from 'gsap';
 import { PixiPlugin } from 'gsap/PixiPlugin';
-import { Linear } from 'gsap';
 import { Boxes } from './Box';
 
 
@@ -12,7 +11,7 @@ document.body.appendChild(app.view as HTMLCanvasElement);
 //register pixi plugin
 gsap.registerPlugin(PixiPlugin);
 PixiPlugin.registerPIXI(PIXI);
-//gsap.registerPlugin(EaselPlugin);
+
 
 
 //create box
@@ -23,9 +22,9 @@ const box3 = new Boxes(700, 300, 100, 100);
 
 // add circles to stage
 app.stage.addChild(box, box1, box2, box3);
-//
 
 
+//add animations
 box.addAnimation('rotation', 360, 1 );
 box1.addAnimation('blur', 10, 1);
 box2.addAnimation('skewX', 50, 1);

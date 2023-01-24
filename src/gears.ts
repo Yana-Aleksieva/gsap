@@ -85,7 +85,7 @@ function spawnGear(asset: PIXI.Texture, x: number, y: number, prop, value: numbe
 }
 
 
-function createControls(box, fast, faster, normal, paused) {
+function createControls(box: PIXI.Texture, fast: PIXI.Texture, faster: PIXI.Texture, normal: PIXI.Texture, paused: PIXI.Texture) {
 
     const container = new PIXI.Container()
     const sprite = new PIXI.Sprite(box);
@@ -114,7 +114,7 @@ function createControls(box, fast, faster, normal, paused) {
 }
 
 
-function createSprite(asset, x: number, y: number) {
+function createSprite(asset: PIXI.Texture, x: number, y: number) {
 
 
     const fastSprite = new PIXI.Sprite(asset);
